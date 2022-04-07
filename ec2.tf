@@ -11,5 +11,4 @@ data "aws_ami" "app_ami" {
 resource "aws_instance" "ins-1" {
   ami           = data.aws_ami.app_ami.id
   instance_type = "t2.micro"
-  key_name = "tf-key"
 }
